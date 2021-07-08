@@ -12,6 +12,7 @@
 export function absoluteValuesSumMinimization(a: number[]): number {
     const isEven = a.length % 2 === 0;
 
+    //get the median, if it is even then choose the leftmost one
     return isEven ? a[a.length / 2 - 1] : a[Math.floor(a.length / 2)]
 }
 
