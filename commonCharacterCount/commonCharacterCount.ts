@@ -13,18 +13,19 @@ export function commonCharacterCount(s1: string, s2: string): number {
       }
     }
 
-  }
-  // alternate solution
-  // makes the arrays into objects so can use the hasOwnProperty method
-  let arr1Char = getCharList(arr1);
-  let arr2Char = getCharList(arr2);
-  for (const prop in arr1Char) {
-    if (arr2Char.hasOwnProperty(prop)) {
-      // get the lower amount in prop if it exists in both
-      if (arr1Char[prop] < arr2Char[prop]) {
-        count += arr1Char[prop]
-      } else {
-        count += arr2Char[prop]
+  } else {
+    // alternate solution
+    // makes the arrays into objects so can use the hasOwnProperty method
+    let arr1Char = getCharList(arr1);
+    let arr2Char = getCharList(arr2);
+    for (const prop in arr1Char) {
+      if (arr2Char.hasOwnProperty(prop)) {
+        // get the lower amount in prop if it exists in both
+        if (arr1Char[prop] < arr2Char[prop]) {
+          count += arr1Char[prop]
+        } else {
+          count += arr2Char[prop]
+        }
       }
     }
   }
