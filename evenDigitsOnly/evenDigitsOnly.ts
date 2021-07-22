@@ -23,5 +23,20 @@ export function evenDigitsOnly(n): boolean {
   return true;
 }
 
+function extraEvenDigitsOnly(n: number): boolean {
+  // basicailly the same as what i did above but skipping the unneeded modifying
+  const sN: string = n.toString();
+  // iterates through each number seeing if it is divisible by 2
+  for (let i = 0; i < sN.length; i++) {
+    if (parseInt(sN[i]) % 2 !== 0) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
 console.log(evenDigitsOnly(248622));
 console.log(evenDigitsOnly(642386));
+console.log(extraEvenDigitsOnly(248622));
+console.log(extraEvenDigitsOnly(642386));
