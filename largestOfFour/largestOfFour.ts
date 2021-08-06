@@ -1,9 +1,9 @@
 export function largestOfFour(nums: number[][]): number[] {
   let largestArr = [];
-  for (let i = 0; i < nums.length; i++) {
+  for (let numberList of nums) {
     // sorts highest to lowest then pushes the first in the array
-    nums[i].sort((a, b) => b - a);
-    largestArr.push(nums[i][0])
+    numberList.sort((a, b) => b - a);
+    largestArr.push(numberList[0])
   }
 
   return largestArr;
