@@ -4,7 +4,6 @@ export function sumAllPrimes(num: number): number {
   for (let currentNum = 1; currentNum <= num; currentNum++) {
     let isPrime = true;
     let twoDivisors = 0;
-    console.log(currentNum)
     for (let upToCurrentNum = 1; upToCurrentNum <= currentNum; upToCurrentNum++) {
       if (currentNum % upToCurrentNum === 0) {
         twoDivisors += 1;
