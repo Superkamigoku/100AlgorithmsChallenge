@@ -31,4 +31,7 @@ function getAlphabetCount(word) {
   return alphabetCount;
 }
 
+
+
+
 console.log(stringsConstruction('abc', 'abaccb'));
